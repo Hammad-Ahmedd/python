@@ -7,7 +7,7 @@ def argsFun(*number):
     return total
 print(argsFun(1,2,3))
     
-    
+
 # 🟩 **2. kwargs – Variable Keyword Arguments   
 
 def kwargsFun(**kwargs_dis):
