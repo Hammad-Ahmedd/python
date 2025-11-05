@@ -7,6 +7,7 @@ class student:
 
 student1=student("Hammad",19)
 student1.printInput()
+
 '''
 class roll:
     a=10
