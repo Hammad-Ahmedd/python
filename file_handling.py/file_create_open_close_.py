@@ -1,3 +1,4 @@
+'''
 f=open("demo.txt","w")
 f.write("I am hammad ahmed")
 f.close()
@@ -16,3 +17,4 @@ f.close()
 with open("demo.txt","r") as f:
     content=f.read()
     print(content)
+'''    
