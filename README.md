@@ -1,4 +1,4 @@
-![Machine Learning Mindmap](https://raw.githubusercontent.com/Hammad-Ahmedd/python/1faa9cc4472039d4f6895be2bc5bd7d5ddccce81/python%20libraries/Scikit-Learn/Ml.png)
+![Machine Learning Mindmap](https://github.com/Hammad-Ahmedd/python/blob/c925c96fab744980d5a386e73534c369b07e983f/python%20libraries/Scikit-Learn/Ml.png)
 
 🚀 Learning Journey
 
