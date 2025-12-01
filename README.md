@@ -267,4 +267,4 @@ This project is open source and available under the [MIT License](LICENSE).
 
 ---
 
-*Last Updated: December 2024*
+*Last Updated: December 2025*
