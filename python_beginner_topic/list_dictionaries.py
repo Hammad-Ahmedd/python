@@ -1,7 +1,6 @@
 students=[
     {"name": "Hammad", "age": 19, "grade": "A"},
-    {"name": "Ali", "age": 20, "grade": "B"}
-    
+    {"name": "Ali", "age": 20, "grade": "B"} 
 ]
 
 def addStudent():
