@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>FastAPI App</title>
+</head>
+
+<body>
+
+    <input type="text" id="nameInput" placeholder="Enter name" />
+    <button onclick="addUser()">Add User</button>
+    <ul id="userList"></ul>
+
+    <script>
+        async function addUser() {
+            const name = document.getElementById("nameInput");
+            nameValue = name.value
+            const response = await fetch("http://127.0.0.1:8000/users", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify({ name: nameValue })
+            });
+
+            const data = await response.json();
+            loadUsers();
+            name.value = "";
+        }
+        /**
+        async function deleteuser() {
+            try {
+                const api = "http://127.0.0.1:8000/users/";
+                const user_id = document.querySelector('#idInpt').value;
+
+                const response = await fetch(`${api}${user_id}`, {
+                    method: "DELETE"
+                });
+
+                const data = await response.json();
+                console.log(data);
+                loadUsers();
+                document.querySelector('#idInpt').value = "";
+            } catch (error) {
+                console.log(error);
+            }
+        }
+            **/
+
+        async function loadUsers() {
+            const response = await fetch("http://127.0.0.1:8000/users");
+            const users = await response.json();
+
+            const list = document.getElementById("userList");
+            list.innerHTML = "";
+
+            users.forEach(user => {
+                const li = document.createElement("li");
+                li.innerText = user.id + " - " + user.name;
+                list.appendChild(li);
+            });
+        }
+
+        loadUsers();
+    </script>
+
+</body>
+
+</html>
