@@ -15,17 +15,19 @@
         async function addUser() {
             const name = document.getElementById("nameInput");
             nameValue = name.value
-            const response = await fetch("http://127.0.0.1:8000/users", {
-                method: "POST",
-                headers: {
-                    "Content-Type": "application/json"
-                },
-                body: JSON.stringify({ name: nameValue })
-            });
+            if (!nameValue == "") {
+                const response = await fetch("http://127.0.0.1:8000/users", {
+                    method: "POST",
+                    headers: {
+                        "Content-Type": "application/json"
+                    },
+                    body: JSON.stringify({ name: nameValue })
+                });
 
-            const data = await response.json();
-            loadUsers();
-            name.value = "";
+                const data = await response.json();
+                loadUsers();
+                name.value = "";
+            }
         }
         /**
         async function deleteuser() {
