@@ -128,7 +128,7 @@
             },
             body: JSON.stringify({
                 Pclass: Number(ticketClass),
-                Sex: sex.toLowerCase(),   // IMPORTANT
+                Sex: sex.toLowerCase(),
                 Age: Number(age),
                 SibSp: Number(sibSp),
                 Parch: Number(parch),
@@ -137,7 +137,7 @@
             })
         });
 
-        const data = await response.json();   // ✅ READ RESPONSE
+        const data = await response.json();
 
         document.getElementById("result").innerHTML =
             `Prediction: <b>${data.status}</b>`;
