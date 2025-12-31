@@ -13,13 +13,14 @@ users=[
 
 @app.post("/users")
 def post_grade():
-    if user["marks"] == 90:
+    for user in users:
+        if user["marks"] == 90:
             user["grade"] = "A+"
-    elif user["marks"] == 80:
+        elif user["marks"] == 80:
             user["grade"] = "A"
-    elif user["marks"] == 70:
+        elif user["marks"] == 70:
             user["grade"] = "B"
-    elif user["marks"] == 60:
+        elif user["marks"] == 60:
             user["grade"] = "C"
 
     return users   
@@ -29,12 +30,10 @@ def root():
     return users
 
 @app.get("/user/{user_id}")
-def user(user_id:int):
-    user_found=False
+def user(user_id: int):
     for us in users:
-        if us["id"]==user_id:
-            user_found=True
+        if us["id"] == user_id:
             return us
-    if user_found==False:
-       return "User do not Found"     
+    return {"error": "User not found"}
+     
     
