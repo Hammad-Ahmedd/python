@@ -459,6 +459,6 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 **Made with ❤️ by [Hammad Ahmed](https://github.com/Hammad-Ahmedd)**
 
-_Last Updated: <!--LAST_UPDATED-->December 2025<!--/LAST_UPDATED--> | Actively Maintained ✅_
+_Last Updated: <!--LAST_UPDATED--><!--/LAST_UPDATED--> | Actively Maintained ✅_
 
 </div>
