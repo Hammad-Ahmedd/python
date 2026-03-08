@@ -32,7 +32,7 @@ def post_grade():
         elif user["marks"] == 60:
             user["grade"] = "C"
 
-    return users   
+    return users       
 
 @app.get("/users")
 def root():
